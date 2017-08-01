@@ -267,7 +267,7 @@
                     <h5 class="title">Last Few links Shortened</h5>
                         <ul>
                             {% for i in url_list reversed %}
-                            <li><a href="{{i}}">{{i}}</a></li>
+                            <li><a target="_blank" href="http://{{i.name}}">{{i.name}}</a></li>
                             {% endfor %}
                         </ul>
                 </div>
