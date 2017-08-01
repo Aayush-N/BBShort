@@ -45,7 +45,7 @@ def home_view(request):
 
         final = ''.join(alpha)
         print('Final ' + final)
-        final = 'bbtechshort.herokuapp.com/short/' + final
+        final = 'backbenchertech.com/short/' + final
         #final is the output url
         '''
 
