@@ -86,6 +86,41 @@
         #form6{
             width: 100%;
         }
+
+        /*Heartbeat*/
+        .fa-pulse {
+        	display: inline-block;
+        	-moz-animation: pulse 2s infinite linear;
+        	-o-animation: pulse 2s infinite linear;
+        	-webkit-animation: pulse 2s infinite linear;
+        	animation: pulse 2s infinite linear;
+        }
+
+        @-webkit-keyframes pulse {
+        	0% { opacity: 1; }
+        	50% { opacity: 0; }
+        	100% { opacity: 1; }
+        }
+        @-moz-keyframes pulse {
+        	0% { opacity: 1; }
+        	50% { opacity: 0; }
+        	100% { opacity: 1; }
+        }
+        @-o-keyframes pulse {
+        	0% { opacity: 1; }
+        	50% { opacity: 0; }
+        	100% { opacity: 1; }
+        }
+        @-ms-keyframes pulse {
+        	0% { opacity: 1; }
+        	50% { opacity: 0; }
+        	100% { opacity: 1; }
+        }
+        @keyframes pulse {
+        	0% { opacity: 1; }
+        	50% { opacity: 0; }
+        	100% { opacity: 1; }
+        }
     </style>
 
 </head>
@@ -193,18 +228,29 @@
 
                 <hr class="hidden-md-up">
                 <!--Third column-->
+                <div class="col-lg-2 col-md-4 ">
+                    <h5 class="title">Built with <i class="fa fa-heart fa-pulse" style='color:#FF0000' aria-hidden="true"></i> Using</h5>
+                    <ul>
+                        <li><a href="www.djangoproject.com">Django</a></li>
+                        <li><a href="mdbootstrap.com">MDBootstrap</a></li>
+                    </ul>
+                </div>
+                <!--/.Third column-->
+
+                <hr class="hidden-md-up">
+
+                <!--Fourth column-->
                 <div class="col-lg-2 col-md-4">
-                    <h5 class="title">Last 3 links Shortened</h5>
+                    <h5 class="title">Last Few links Shortened</h5>
                         <ul>
                             {% for i in url_list reversed %}
                             <li><a href="{{i}}">{{i}}</a></li>
                             {% endfor %}
                         </ul>
                 </div>
-                <!--/.Third column-->
+                <!--/.Fourth column-->
 
                 <hr class="hidden-md-up">
-
 
 
             </div>
