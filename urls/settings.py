@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'a5j9@09*aohcb4)ymh+-ly1=km(+t+8_6zyu_(c_w*i4met(8!'
+SECRET_KEY = os.environ['secret_bbshort'],
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -69,32 +69,19 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'urls.wsgi.application'
-
-
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'dc189gssepq6o8',
-        'USER': 'bgqebdchmkatio',
-        'PASSWORD': '5ca146c8c90893ee32d4efe6bfec86e68d4db439bb876de05b2906f8ba65b480',
-        'HOST': 'ec2-23-23-86-179.compute-1.amazonaws.com',
-        'PORT': '5432',
+        'NAME': os.environ['name_bbshort'],
+        'USER': os.environ['user_bbshort'],
+        'PASSWORD': os.environ['password_bbshort'],
+        'HOST': os.environ['host_bbshort'],
+        'PORT': os.environ['port_bbshort'],
     }
 }
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'djangodb',
-#         'USER': 'admin',
-#         'PASSWORD': '',
-#         'HOST': 'localhost',
-#         'PORT': '',
-#     }
-# }
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
