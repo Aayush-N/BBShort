@@ -86,6 +86,26 @@
         #form6{
             width: 100%;
         }
+        .toolt{
+            display: none;
+        }
+        @media only screen and (max-device-width: 700px)
+        {
+            .main-text{
+                padding-top: 15%;
+                font-size: 52px;
+            }
+            .show{
+                width: 100% !important;
+                text-align: center;
+            }
+            #form6{
+                width: 100%;
+            }
+            .toolt{
+                display: block;
+            }
+        }
 
         /*Heartbeat*/
         .fa-pulse {
@@ -186,6 +206,9 @@
                         </div>
                         <div class="md-form form-group copy">
                             <button onclick="" class="btn btn1 btn-outline-info waves-effect copyButton" id="up" data-clipboard-action="copy" data-clipboard-target="#form6">Copy</button>
+                        </div>
+                        <div class="toolt" style="padding-bottom: 5%;">
+                            <h6>Copy button doesn't work on mobile yet :(</h6>
                         </div>
                     </div>
                 </li>
@@ -312,6 +335,7 @@
         $(this).html("COPIED!");
 
     })
+    $('#form6').get(0).scrollLeft = $('#form6').get(0).scrollWidth;
     </script>
 </body>
 
