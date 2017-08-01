@@ -6,6 +6,21 @@ from django.core.urlresolvers import resolve
 from .models import URLTable
 # Create your views here.
 
+def handler404(request):
+    response = render_to_response('404.html', {}, context_instance=RequestContext(request))
+    response.status_code = 404
+    return response
+
+def handler500(request):
+    response = render_to_response('503.html', {}, context_instance=RequestContext(request))
+    response.status_code = 500
+    return response
+
+def handler500(request):
+    response = render_to_response('500.html', {}, context_instance=RequestContext(request))
+    response.status_code = 500
+    return response
+
 def home_view(request):
     template_name = 'index.html'
     done = 'False'
