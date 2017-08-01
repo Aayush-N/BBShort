@@ -10,9 +10,13 @@ def home_view(request):
     template_name = 'index.html'
     done = 'False'
     final = 'None'
+    length = len(URLTable.objects.all())
+    obj = URLTable.objects.all()[length-3:]
     context = {
         "done":done,
         "output":final,
+        "url_list":obj,
+        "num":length + 500,
     }
     if request.method == 'POST':
         url = request.POST.get("url_name")
