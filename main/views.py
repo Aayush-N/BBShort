@@ -102,4 +102,4 @@ def short_view(request):
         #get data from this(ans) ID, maybe table sl.no
         return redirect("http://" + str(template_name))
     except:
-        return redirect("http://bbshort.herokuapp.com/error")
+        return redirect("backbenchertech.com/error/")

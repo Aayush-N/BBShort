@@ -25,5 +25,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', home_view),
     url(r'^short/', short_view ),
-    url(r'^error/', TemplateView.as_view(template_name='404.html') )
+    url(r'^error/', TemplateView.as_view(template_name='404.html')),
 ]
