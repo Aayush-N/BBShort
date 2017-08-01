@@ -51,7 +51,7 @@ def home_view(request):
 
         '''
         done = 'True'
-        return render(request, template_name,{"done": done, "input":url, "output":final,})
+        return render(request, template_name,{"done": done, "input":url, "output":final,"url_list":obj,"num":length + 500,})
 
     return render(request, template_name, context)
 
