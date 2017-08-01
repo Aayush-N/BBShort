@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from django.views.generic import TemplateView
 
 from main.views import (
     home_view,
@@ -23,5 +24,6 @@ from main.views import (
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', home_view),
-    url(r'^short/', short_view )
+    url(r'^short/', short_view ),
+    url(r'^error/', TemplateView.as_view(template_name='404.html') )
 ]
